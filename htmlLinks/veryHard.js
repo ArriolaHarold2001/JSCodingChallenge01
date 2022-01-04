@@ -95,68 +95,7 @@ divideOp.addEventListener("click", function () {
 });
 
 document.querySelector(".prompt").addEventListener("click", function () {
-  let firstNum;
-  let secondNum;
-  let operator;
-  let inputNums;
-  let operatorCount;
-  let firstNumAmount;
-  let secondNumAmount;
-  const calcPrompt = prompt(
-    "Enter an equation using ( + , - , * , / ) and 2 numbers EX: X + X"
-  );
-  console.log(calcPrompt);
-
-  for (let i = 0; i < calcPrompt.length; i++) {
-    if (
-      calcPrompt.charAt(i) === "+" ||
-      calcPrompt.charAt(i) === "-" ||
-      calcPrompt.charAt(i) === "*" ||
-      calcPrompt.charAt(i) === "/"
-    ) {
-      operator = calcPrompt.charAt(i);
-      operatorCount = calcPrompt.charAt(i).length + 1;
-
-      // console.log("operator", operator);
-      // } else if (operatorCount === 2) {
-      //   console.log("firstnumber", calcPrompt(i));
-      //}
-    } else if (
-      calcPrompt.charAt(i) === "1" ||
-      calcPrompt.charAt(i) === "2" ||
-      calcPrompt.charAt(i) === "3" ||
-      calcPrompt.charAt(i) === "4" ||
-      calcPrompt.charAt(i) === "5" ||
-      calcPrompt.charAt(i) === "6" ||
-      calcPrompt.charAt(i) === "7" ||
-      calcPrompt.charAt(i) === "8" ||
-      calcPrompt.charAt(i) === "9" ||
-      calcPrompt.charAt(i) === "0"
-    ) {
-      inputNums = calcPrompt.charAt(i);
-      console.log(inputNums);
-    }
-  }
-
-  inputNums = Number(calcPrompt);
-
-  if (operator === "+") {
-    alert(`${firstNum} ${operator} ${secondNum} = ${add(firstNum, secondNum)}`);
-  } else if (operator === "-") {
-    alert(
-      `${firstNum} ${operator} ${secondNum} = ${subtract(firstNum, secondNum)}`
-    );
-  } else if (operator === "*") {
-    alert(
-      `${firstNum} ${operator} ${secondNum} = ${multiply(firstNum, secondNum)}`
-    );
-  } else if (operator === "/") {
-    alert(
-      `${firstNum} ${operator} ${secondNum} = ${divide(firstNum, secondNum)}`
-    );
-  } else {
-    alert(
-      "try inputing equation without spaces and only using the (+, -, *, /) operators"
-    );
-  }
+  const firstNumPrompt = prompt("Enter a number");
+  const operatorPrompt = prompt("Enter one of the operators (+,)");
+  const secondNumPrompt = prompt("Enter one more number");
 });
