@@ -105,8 +105,15 @@ document.querySelector(".prompt").addEventListener("click", function () {
   // console.log(calcPrompt);
 
   for (let i = 0; i < calcPrompt.length; i++) {
-    inputArray[i] = calcPrompt.charAt(i);
-    console.log(inputArray);
+    if (
+      calcPrompt.charAt(i) === "+" ||
+      calcPrompt.charAt(i) === "-" ||
+      calcPrompt.charAt(i) === "*" ||
+      calcPrompt.charAt(i) === "/"
+    ) {
+      operator = calcPrompt.charAt(i);
+      console.log("operator", operator);
+    }
   }
 
   firstNum = Number(inputArray[0]);
