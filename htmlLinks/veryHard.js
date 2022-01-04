@@ -96,13 +96,41 @@ divideOp.addEventListener("click", function () {
 
 document.querySelector(".prompt").addEventListener("click", function () {
   let inputArray = [];
+  let firstNum;
+  let secondNum;
+  let operator;
   const calcPrompt = prompt(
     "Enter an equation using ( + , - , * , / ) and 2 numbers EX: X + X"
   );
-  console.log(calcPrompt);
+  // console.log(calcPrompt);
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < calcPrompt.length; i++) {
     inputArray[i] = calcPrompt.charAt(i);
     console.log(inputArray);
+  }
+
+  firstNum = Number(inputArray[0]);
+  // console.log(firstNum);
+  secondNum = Number(inputArray[2]);
+  operator = inputArray[1];
+
+  if (operator === "+") {
+    alert(`${firstNum} ${operator} ${secondNum} = ${add(firstNum, secondNum)}`);
+  } else if (operator === "-") {
+    alert(
+      `${firstNum} ${operator} ${secondNum} = ${subtract(firstNum, secondNum)}`
+    );
+  } else if (operator === "*") {
+    alert(
+      `${firstNum} ${operator} ${secondNum} = ${multiply(firstNum, secondNum)}`
+    );
+  } else if (operator === "/") {
+    alert(
+      `${firstNum} ${operator} ${secondNum} = ${divide(firstNum, secondNum)}`
+    );
+  } else {
+    alert(
+      "try inputing equation without spaces and only using the (+, -, *, /) operators"
+    );
   }
 });
