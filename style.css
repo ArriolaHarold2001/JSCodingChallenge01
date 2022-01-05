@@ -78,3 +78,39 @@ nav a:active {
   background-color: red;
   padding: 20px;
 }
+/* *********************************** */
+.SP-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  position: fixed;
+  /* top: 50%; */
+  left: 20%;
+  z-index: 1000;
+  background-color: #fff;
+  border: 5px #000 solid;
+  border-radius: 30px;
+  width: 800px;
+  height: 600px;
+  padding: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.default-display {
+  display: none;
+}
+
+.prompt-item--01 {
+}
+.prompt-item--02 {
+  display: none;
+}
+.prompt-item--03 {
+  display: none;
+}

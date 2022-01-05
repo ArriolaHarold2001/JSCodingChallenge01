@@ -96,6 +96,68 @@ divideOp.addEventListener("click", function () {
 
 document.querySelector(".prompt").addEventListener("click", function () {
   const firstNumPrompt = prompt("Enter a number");
-  const operatorPrompt = prompt("Enter one of the operators (+,)");
+  const operatorPrompt = prompt("Enter one of the operators ( + , - , * , / )");
   const secondNumPrompt = prompt("Enter one more number");
+
+  const firstNum = Number(firstNumPrompt);
+  const secondNum = Number(secondNumPrompt);
+
+  if (operatorPrompt === "+") {
+    console.log(
+      `${firstNum} ${operatorPrompt} ${secondNum}  = ${add(
+        firstNum,
+        secondNum
+      )}`
+    );
+  } else if (operatorPrompt === "-") {
+    console.log(
+      `${firstNum} ${operatorPrompt} ${secondNum}  = ${subtract(
+        firstNum,
+        secondNum
+      )}`
+    );
+  } else if (operatorPrompt === "*") {
+    console.log(
+      `${firstNum} ${operatorPrompt} ${secondNum}  = ${multiply(
+        firstNum,
+        secondNum
+      )}`
+    );
+  } else if (operatorPrompt === "/") {
+    console.log(
+      `${firstNum} ${operatorPrompt} ${secondNum}  = ${divide(
+        firstNum,
+        secondNum
+      )}`
+    );
+  } else {
+    console.log(`Please enter a the correct items in the correct prompts`);
+  }
+});
+
+document.querySelector(".showSP").addEventListener("click", function () {
+  const allDisplay = document.querySelector(".default-display");
+  const firstSlide = document.querySelector("prompt-item--01");
+  const secondSlide = document.querySelector("prompt-item--02");
+  const thirdSlide = document.querySelector("prompt-item--03");
+  let currentSlide;
+  allDisplay.style.display = "flex";
+  currentSlide = firstSlide;
+
+  document.querySelector("close-btn").addEventListener("click", function () {
+    allDisplay.style.display = "none";
+  });
+  document.querySelector("next-btn").addEventListener("click", function () {
+    allDisplay.style.display = "flex";
+    if (currentSlide === firstSlide) {
+      firstSlide.style.display = "none";
+      secondSlide.style.display = "block";
+      currentSlide = secondSlide;
+    }
+  });
+
+  document.querySelector("addBtn").addEventListener("click", function () {});
+  document.querySelector("subBtn").addEventListener("click", function () {});
+  document.querySelector("mulBtn").addEventListener("click", function () {});
+  document.querySelector("divBtn").addEventListener("click", function () {});
 });
