@@ -103,28 +103,28 @@ document.querySelector(".prompt").addEventListener("click", function () {
   const secondNum = Number(secondNumPrompt);
 
   if (operatorPrompt === "+") {
-    console.log(
+    alert(
       `${firstNum} ${operatorPrompt} ${secondNum}  = ${add(
         firstNum,
         secondNum
       )}`
     );
   } else if (operatorPrompt === "-") {
-    console.log(
+    alert(
       `${firstNum} ${operatorPrompt} ${secondNum}  = ${subtract(
         firstNum,
         secondNum
       )}`
     );
   } else if (operatorPrompt === "*") {
-    console.log(
+    alert(
       `${firstNum} ${operatorPrompt} ${secondNum}  = ${multiply(
         firstNum,
         secondNum
       )}`
     );
   } else if (operatorPrompt === "/") {
-    console.log(
+    alert(
       `${firstNum} ${operatorPrompt} ${secondNum}  = ${divide(
         firstNum,
         secondNum
